@@ -7,4 +7,4 @@ def inc(n, dn=1):
     return n + dn
 
 def negabs(n):
-    return n if n <= 1 else -n
+    return n if n <= 0 else -n
