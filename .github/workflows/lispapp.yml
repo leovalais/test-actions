@@ -10,9 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Container inspection
-        run: ls -la /root
-      - name: Link ~/common-lisp
-        run: ln -s /root/common-lisp /github/home/common-lisp
+        run: ls -la /root ; ls -la /root/quicklisp
+      - name: Link ~/common-lisp and ~/quicklisp
+        run: |
+          ln -s /root/common-lisp /github/home/common-lisp \
+          && ln -s /root/quicklisp /github/home/quicklisp
       - name: test-nothing
         env:
           STING_SYSTEMS: :alexandria
