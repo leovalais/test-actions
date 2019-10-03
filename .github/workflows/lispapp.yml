@@ -3,16 +3,14 @@ name: Lisp application
 on: [push]
 
 jobs:
-  unit-test:
+  tests:
     runs-on: ubuntu-latest
     container:
       image: letrov/sting:test
     steps:
       - uses: actions/checkout@v1
-      - name: Container inspection
-        run: whoami ; ls -la /root ; ls -la /root/quicklisp
-      - name: test-nothing
+      - name: sting
         env:
           STING_SYSTEMS: :alexandria
-          HOME: /root
+          HOME: /
         run: sting
