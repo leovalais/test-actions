@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Container inspection
-        run: ls -la /root ; ls -la /root/quicklisp
+        run: whoami ; ls -la /root ; ls -la /root/quicklisp
       - name: Link ~/common-lisp and ~/quicklisp
         run: |
           ln -s /root/common-lisp /github/home/common-lisp \
