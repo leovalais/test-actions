@@ -12,7 +12,7 @@ jobs:
       - name: Hello
         run: echo Hello world
       - name: Container inspection
-        run: ls -la ; pwd ; ls /
+        run: ls -la ; pwd ; ls / ; which sting
       - name: test-nothing
         env:
           STING_SYSTEMS: :alexandria
