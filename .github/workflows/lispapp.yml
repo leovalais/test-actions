@@ -1,0 +1,12 @@
+name: Lisp application
+
+on: [push]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: do-testing
+        uses: docker://letrov/sting:test
+        run: sting
