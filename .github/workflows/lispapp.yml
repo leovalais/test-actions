@@ -7,13 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: letrov/sting:test
-      options: --user root
     steps:
       - uses: actions/checkout@v1
-      - name: Hello
-        run: echo Hello world
       - name: Container inspection
-        run: ls -Rla ~
+        run: ls -la /root
+      - name: Link ~/common-lisp
+        run: ln -s /root/common-lisp /github/home/common-lisp
       - name: test-nothing
         env:
           STING_SYSTEMS: :alexandria
