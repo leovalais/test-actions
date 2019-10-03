@@ -5,14 +5,15 @@ on: [push]
 jobs:
   unit-test:
     runs-on: ubuntu-latest
+    container:
+      image: letrov/sting:test
     steps:
       - uses: actions/checkout@v1
-      - name: do-testing-should-success
+      - name: Hello
+        run: echo Hello world
+      - name: ls -Rla
+        run: ls -Rla
+      - name: test-nothing
         env:
-          STING_SYSTEMS: yolo
-        uses: docker://letrov/sting:test
-      - name: do-testing-should-fail
-        uses: docker://letrov/sting:test
-      - name: should-not-run
-        run: |
-          echo "HELLO WORLD"
+          STING_SYSTEMS: :alexandria
+        run: sting
