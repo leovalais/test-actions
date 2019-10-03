@@ -7,6 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: do-testing
+      - name: do-testing-should-success
+        env:
+          STING_SYSTEMS: yolo
         uses: docker://letrov/sting:test
-        run: sting
+      - name: do-testing-should-fail
+        uses: docker://letrov/sting:test
+      - name: should-not-run
+        run: |
+          echo "HELLO WORLD"
