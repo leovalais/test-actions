@@ -1,1 +1,1 @@
-https://github.com/leovalais/test-actions/workflows/Python%20application/badge.svg
+![](https://github.com/leovalais/test-actions/workflows/Python%20application/badge.svg)
