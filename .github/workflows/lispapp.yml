@@ -9,8 +9,8 @@ jobs:
       image: letrov/sting:test
     steps:
       - uses: actions/checkout@v1
-      - name: Move system into ~/common-lisp
-        run: pwd ; mv ${GITHUB_WORKSPACE} ${ASDF_PATH}
+      - name: Symlink system into ~/common-lisp
+        run: ln -s ${ASDF_PATH}/${GITHUB_WORKSPACE} ${GITHUB_WORKSPACE}
       - name: sting
         env:
           STING_SYSTEMS: :alexandria
