@@ -4,10 +4,7 @@ variables:
   STING_SYSTEMS: :mymath/tests
   HOME: /
 
-setupASDF:
-  script:
-    - ln -s ${CI_PROJECT_DIR} ${ASDF_PATH}/user-repo
-
 test:
   script:
+    - ln -s ${CI_PROJECT_DIR} ${ASDF_PATH}/user-repo
     - sting
