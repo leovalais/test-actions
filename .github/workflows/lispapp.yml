@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Symlink system into ~/common-lisp
-        run: ln -s ${ASDF_PATH}/${GITHUB_WORKSPACE} ${GITHUB_WORKSPACE} ; ls -Rl ${ASDF_PATH}
+        run: ln -s ${GITHUB_WORKSPACE} ${ASDF_PATH}/${GITHUB_WORKSPACE} ; ls -Rl ${ASDF_PATH}
       - name: sting
         env:
           STING_SYSTEMS: :mymath/tests
