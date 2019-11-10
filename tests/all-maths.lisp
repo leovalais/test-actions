@@ -1,5 +1,6 @@
 (defpackage :mymath/tests
-  (:use :cl :mymath :sting))
+  (:use :cl :mymath :sting)
+  (:shadowing-import-from :cl assert))
 
 (in-package :mymath/tests)
 
