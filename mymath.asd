@@ -12,7 +12,7 @@
 
   :serial t
   :components
-  ((:file "mymath.lisp")))
+  ((:file "mymath")))
 
 (asdf:defsystem :mymath/tests
   :name "mymath/tests"
@@ -26,4 +26,4 @@
 
   :serial t
   :components
-  ((:file "all-maths.lisp")))
+  ((:file "all-maths")))
