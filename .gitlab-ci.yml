@@ -1,6 +1,6 @@
 image: letrov/sting:test
 
-env:
+variables:
   STING_SYSTEMS: :mymath/tests
   HOME: /
 
