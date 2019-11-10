@@ -14,4 +14,5 @@ jobs:
       - name: Run test suite
         env:
           STING_SYSTEMS: :mymath/tests
+          HOME: / # override GH Actions' default value (ASDF uses it, default=/github/home)
         run: sting
