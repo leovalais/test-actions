@@ -1,7 +1,7 @@
 image: letrov/sting:test
 
 variables:
-  STING_SYSTEMS: :mymath/tests
+  STING_SYSTEMS: ":mymath/tests"
   HOME: /
 
 test:
