@@ -13,6 +13,6 @@ jobs:
         run: ln -s ${ASDF_PATH}/${GITHUB_WORKSPACE} ${GITHUB_WORKSPACE}
       - name: sting
         env:
-          STING_SYSTEMS: :alexandria
+          STING_SYSTEMS: :mymath/tests
           HOME: /
         run: sting
