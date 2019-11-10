@@ -26,4 +26,5 @@
 
   :serial t
   :components
-  ((:file "all-maths")))
+  ((:module "tests"
+    :components ((:file "all-maths"))))
