@@ -1,4 +1,4 @@
-image: letrov/sting:test
+image: letrov/sting:latest
 
 variables:
   STING_SYSTEMS: ":mymath/tests"
