@@ -9,8 +9,8 @@ jobs:
       image: letrov/sting:test
     steps:
       - uses: actions/checkout@v1
-      - name: Symlink system into ~/common-lisp
-        run: ln -s ${GITHUB_WORKSPACE} ${ASDF_PATH}/user-repo ; ls -Rl ${ASDF_PATH}
+      - name: Make system visible by ASDF
+        run: ln -s ${GITHUB_WORKSPACE} ${ASDF_PATH}/user-repo
       - name: sting
         env:
           STING_SYSTEMS: :mymath/tests
