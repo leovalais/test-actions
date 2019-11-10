@@ -6,5 +6,5 @@ variables:
 
 test:
   script:
-    - ln -s ${CI_PROJECT_DIR} ${ASDF_PATH}/user-repo
+    - ln -s ${CI_PROJECT_DIR} ${ASDF_PATH}/$(basename ${CI_PROJECT_DIR})
     - sting
