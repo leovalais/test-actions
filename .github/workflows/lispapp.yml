@@ -11,8 +11,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Make system visible by ASDF
         run: ln -s ${GITHUB_WORKSPACE} ${ASDF_PATH}/user-repo
-      - name: sting
+      - name: Run test suite
         env:
           STING_SYSTEMS: :mymath/tests
-          HOME: /
         run: sting
